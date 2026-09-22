@@ -6,6 +6,6 @@ pymongo>=4.10
 dnspython>=2.7  # required for mongodb+srv:// connection strings (Atlas)
 python-multipart>=0.0.12
 numpy>=1.26
-opencv-python-headless>=4.10
+opencv-python-headless>=5.0.0.93
 scikit-learn>=1.5
 joblib>=1.4
