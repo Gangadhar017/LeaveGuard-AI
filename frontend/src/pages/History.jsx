@@ -268,6 +268,7 @@ export default function History() {
                     <p className="text-xs text-slate-400">
                       {record.plant} · {formatDate(record.created_at)}
                     </p>
+                    <ConfidenceBar value={record.confidence} className="mt-1.5 max-w-[170px]" />
                   </div>
                   <button onClick={() => setDetail(record)} aria-label="View details" className="rounded-lg p-2 text-slate-500 hover:bg-slate-100">
                     <Eye className="h-4 w-4" />
