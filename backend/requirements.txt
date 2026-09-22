@@ -8,4 +8,4 @@ python-multipart>=0.0.12
 numpy>=1.26
 opencv-python-headless>=4.10
 scikit-learn>=1.5
-joblib>=1.4
+joblib>=1.6.0
