@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+// Base URL of the REST API. Leave VITE_API_URL EMPTY for same-origin mode
+// (Vercel/Netlify rewrites or the Docker nginx proxy), or set it to an
+// absolute URL (e.g. https://leafguard-api.onrender.com) and configure CORS.
+// Unset (undefined) falls back to local development defaults.
+export const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
 
 const client = axios.create({
   baseURL: API_BASE_URL,
