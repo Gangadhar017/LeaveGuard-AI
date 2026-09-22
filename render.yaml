@@ -1,0 +1,20 @@
+# Render Blueprint — one-click deploy of the LeafGuard AI backend.
+# Render reads this file when you choose "New +" -> "Blueprint" in the dashboard.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: leafguard-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MONGODB_URI
+        sync: false          # paste your MongoDB Atlas connection string in the dashboard
+      - key: DATABASE_NAME
+        value: leafguard
+      - key: FRONTEND_URL
+        sync: false          # paste your deployed frontend URL (e.g. https://leafguard.vercel.app)
+      - key: LOG_LEVEL
+        value: INFO
