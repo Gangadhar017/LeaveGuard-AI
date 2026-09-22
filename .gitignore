@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/coverage/
+
+# Environment variables (never commit secrets)
+.env
+backend/.env
+frontend/.env.local
+
+# Datasets (re-downloadable via ml/scripts/download_dataset.py)
+ml/dataset/raw/
+ml/dataset/processed/
+ml/dataset/*.csv
+
+# Trained artifacts (reproducible via ml/scripts/train.py)
+ml/models/*.joblib
+backend/app/ml/artifacts/*.joblib
+
+# Logs & OS noise
+*.log
+.DS_Store
+Thumbs.db
