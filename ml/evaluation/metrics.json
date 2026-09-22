@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-09-22T22:41:12",
+  "dataset": {
+    "source": "PlantVillage (color) \u2014 https://github.com/spMohanty/PlantVillage-Dataset",
+    "num_classes": 9,
+    "class_names": [
+      "Potato Early Blight",
+      "Potato Healthy",
+      "Potato Late Blight",
+      "Tomato Bacterial Spot",
+      "Tomato Early Blight",
+      "Tomato Healthy",
+      "Tomato Late Blight",
+      "Tomato Leaf Mold",
+      "Tomato Septoria Leaf Spot"
+    ],
+    "train": 1898,
+    "validation": 407,
+    "test": 407,
+    "per_class": {
+      "Potato___Early_blight": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Potato___healthy": {
+        "total": 152,
+        "train": 106,
+        "validation": 23,
+        "test": 23
+      },
+      "Potato___Late_blight": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Tomato___Bacterial_spot": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Tomato___Early_blight": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Tomato___healthy": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Tomato___Late_blight": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Tomato___Leaf_Mold": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      },
+      "Tomato___Septoria_leaf_spot": {
+        "total": 320,
+        "train": 224,
+        "validation": 48,
+        "test": 48
+      }
+    }
+  },
+  "features": {
+    "version": "v1-hist46-stats16-lbp10-hog1764",
+    "dim": 1836,
+    "extraction_seconds_all_splits": 66.8
+  },
+  "validation_results": [
+    {
+      "model": "Logistic Regression",
+      "params": {
+        "clf__C": 0.1
+      },
+      "cv_f1_macro": 0.6667,
+      "accuracy": 0.6953,
+      "precision_macro": 0.7127,
+      "recall_macro": 0.6979,
+      "f1_macro": 0.7026,
+      "f1_weighted": 0.696
+    },
+    {
+      "model": "SVM (RBF)",
+      "params": {
+        "clf__C": 10,
+        "clf__gamma": "scale"
+      },
+      "cv_f1_macro": 0.695,
+      "accuracy": 0.7174,
+      "precision_macro": 0.7302,
+      "recall_macro": 0.7262,
+      "f1_macro": 0.725,
+      "f1_weighted": 0.7173
+    },
+    {
+      "model": "Random Forest",
+      "params": {
+        "clf__max_depth": null,
+        "clf__min_samples_leaf": 3,
+        "clf__n_estimators": 300
+      },
+      "cv_f1_macro": 0.7486,
+      "accuracy": 0.7346,
+      "precision_macro": 0.7326,
+      "recall_macro": 0.75,
+      "f1_macro": 0.7371,
+      "f1_weighted": 0.7248
+    }
+  ],
+  "best_model": "Random Forest",
+  "test_metrics": {
+    "accuracy": 0.8034,
+    "precision_macro": 0.8064,
+    "recall_macro": 0.8123,
+    "f1_macro": 0.8083,
+    "f1_weighted": 0.8004
+  },
+  "ablation": {
+    "full_preprocessing": {
+      "accuracy": 0.8034,
+      "precision_macro": 0.8064,
+      "recall_macro": 0.8123,
+      "f1_macro": 0.8083,
+      "f1_weighted": 0.8004
+    },
+    "no_denoise_no_segmentation": {
+      "accuracy": 0.8034,
+      "precision_macro": 0.8086,
+      "recall_macro": 0.8098,
+      "f1_macro": 0.8076,
+      "f1_weighted": 0.8011
+    },
+    "accuracy_delta": 0.0,
+    "f1_macro_delta": 0.0007
+  },
+  "latency": {
+    "mean_ms": 36.9,
+    "p50_ms": 34.2,
+    "p95_ms": 53.0
+  },
+  "model_size_mb": 4.51
+}

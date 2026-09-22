@@ -1,0 +1,66 @@
+{
+  "seed": 42,
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "total_images": 2712,
+  "num_classes": 9,
+  "per_class": {
+    "Potato___Early_blight": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Potato___healthy": {
+      "total": 152,
+      "train": 106,
+      "validation": 23,
+      "test": 23
+    },
+    "Potato___Late_blight": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Tomato___Bacterial_spot": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Tomato___Early_blight": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Tomato___healthy": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Tomato___Late_blight": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Tomato___Leaf_Mold": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "total": 320,
+      "train": 224,
+      "validation": 48,
+      "test": 48
+    }
+  }
+}
