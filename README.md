@@ -182,6 +182,11 @@ docker compose up --build
 > every metric/chart yourself, run the three commands in step 1 — if the artifact
 > is missing the API starts degraded (`/health` → `model_loaded: false`, predict → `503`).
 
+### Deploy to the cloud (free)
+
+A public demo can be hosted for $0 using MongoDB Atlas + Render + Vercel —
+click-by-click instructions in [DEPLOY.md](DEPLOY.md).
+
 ## API
 
 Base URL `/api/v1` — interactive docs at [`/docs`](http://localhost:8000/docs).
