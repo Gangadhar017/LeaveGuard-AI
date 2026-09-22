@@ -47,10 +47,10 @@ Total time: **~30 minutes**, mostly waiting for the first Docker build on Render
 2. Configure:
    - **Framework Preset:** Vite (auto-detected)
    - **Root Directory:** `frontend`  ← important, the React app lives in a subfolder
-   - **Environment Variables:** add
-     | Name | Value |
-     |---|---|
-     | `VITE_API_URL` | `https://leafguard-api-XXXX.onrender.com` (your Render URL, **no** trailing slash) |
+   - **Environment Variables:** none required — `frontend/vercel.json` already proxies
+     `/api`, `/health` and `/docs` to the Render backend in **same-origin mode**
+     (update the rewrite destination there if your Render URL differs), and the
+     client treats an empty `VITE_API_URL` as same-origin.
 3. **Deploy** — done in ~1 minute. Note your frontend URL, e.g. `https://life-guard-ai.vercel.app`.
 
 ## 4. Wire the last screw (CORS)

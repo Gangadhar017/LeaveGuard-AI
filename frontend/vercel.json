@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://leafguard-api-l969.onrender.com/api/:path*" },
+    { "source": "/health", "destination": "https://leafguard-api-l969.onrender.com/health" },
+    { "source": "/openapi.json", "destination": "https://leafguard-api-l969.onrender.com/openapi.json" },
+    { "source": "/docs/:path*", "destination": "https://leafguard-api-l969.onrender.com/docs/:path*" },
+    { "source": "/docs", "destination": "https://leafguard-api-l969.onrender.com/docs" },
+    { "source": "/redoc", "destination": "https://leafguard-api-l969.onrender.com/redoc" },
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  ]
+}
